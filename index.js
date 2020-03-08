@@ -1,4 +1,4 @@
-require('dotenv').config()
+const unique = require('dotenv').config()
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
@@ -13,4 +13,8 @@ client.on('message', msg => {
   }
 })
 
-client.login(process.env.BOT_TOKEN)
+client.login(unique.parsed.BOT_TOKEN)
+
+
+//npm run dev
+//browserify index.js -o bundle.js
